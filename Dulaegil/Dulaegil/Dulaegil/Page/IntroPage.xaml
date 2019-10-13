@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:Dulaegil;assembly=Dulaegil"
+             x:Class="Dulaegil.IntroPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="{StaticResource WindowBackground}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="120" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <!--헤더-->
+            <Grid Grid.Row="0" BackgroundColor="{StaticResource HeaderBackground}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+
+                <!--메뉴 바-->
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="1" BackgroundColor="#000000" Margin="2, 0"/>
+                    <Label Grid.Row="2" BackgroundColor="#000000" Margin="2, 0"/>
+                    <Label Grid.Row="3" BackgroundColor="#000000" Margin="2, 0"/>
+                </Grid>
+
+                <!--하트-->
+                <ImageButton Grid.Column="2" BackgroundColor="Transparent" Source="{local:ImageResources Dulaegil.Images.heart.png}" Clicked="heartBtn_Clicked"/>
+
+                <Button Grid.Column="3" FontSize="Micro" Text="버튼1" TextColor="{StaticResource BasicTextColor}" Clicked="Btn1_Clicked"/>
+                <Button Grid.Column="4" FontSize="Micro" Text="버튼2" TextColor="{StaticResource BasicTextColor}" Clicked="Btn2_Clicked"/>
+
+            </Grid>
+
+            <!--현재 위치 및 시간-->
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="현재 위치" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                <Label x:Name="lt_location" Grid.Row="1" Text="영통구 이의동 창룡대로 250 행복주택" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                <Image Grid.Row="2" Source="{local:ImageResources Dulaegil.Images.in-love.png}" />
+                <Label x:Name="lt_weatherState"   Grid.Row="3" Text="최고" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                <Label x:Name="lt_time"     Grid.Row="4" Text="(2019-10-09 01:20 PM)" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+            </Grid>
+
+            <!--날씨 및 미세먼지-->
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--오늘의 날씨-->
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="12"/>
+                        <RowDefinition Height="12"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="12"/>
+                        <RowDefinition Height="12"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" HorizontalTextAlignment="Center" FontSize="Micro" Text="오늘의 날씨" TextColor="{StaticResource BasicTextColor}"/>
+                    <Label Grid.Row="1" Text="맑음" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                    <Image Grid.Row="2" Source="{local:ImageResources Dulaegil.Images.wether_1.png}" />
+
+                </Grid>
+
+                <Label Grid.Column="1" BackgroundColor="{StaticResource BoundaryLine}" Margin="3, 5"/>
+
+                <!--오늘의 미세먼지-->
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="12"/>
+                        <RowDefinition Height="12"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="12"/>
+                        <RowDefinition Height="12"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" HorizontalTextAlignment="Center" FontSize="Micro" Text="오늘의 미세먼지" TextColor="{StaticResource BasicTextColor}"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="미세먼지" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                    <Image Grid.Row="2" Grid.Column="0" Source="{local:ImageResources Dulaegil.Images.in-love.png}" />
+                    <Label Grid.Row="3" Grid.Column="0" Text="최고" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                    <Label Grid.Row="4" Grid.Column="0" Text="3 ㎍/㎥" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+
+                    <Label Grid.Row="1" Grid.Column="1" Text="초미세먼지" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                    <Image Grid.Row="2" Grid.Column="1" Source="{local:ImageResources Dulaegil.Images.in-love.png}" />
+                    <Label Grid.Row="3" Grid.Column="1" Text="최고" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                    <Label Grid.Row="4" Grid.Column="1" Text="1 ㎍/㎥" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+
+                    <Label Grid.Row="1" Grid.Column="2" Text="이산화질소" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                    <Image Grid.Row="2" Grid.Column="2" Source="{local:ImageResources Dulaegil.Images.happy.png}" />
+                    <Label Grid.Row="3" Grid.Column="2" Text="양호" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                    <Label Grid.Row="4" Grid.Column="2" Text="0.034 ppm" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+
+                    <Label Grid.Row="1" Grid.Column="3" Text="오존" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                    <Image Grid.Row="2" Grid.Column="3" Source="{local:ImageResources Dulaegil.Images.in-love.png}" />
+                    <Label Grid.Row="3" Grid.Column="3" Text="최고" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                    <Label Grid.Row="4" Grid.Column="3" Text="0.012 ppm" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+
+                    <Label Grid.Row="1" Grid.Column="4" Text="일산화탄소" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                    <Image Grid.Row="2" Grid.Column="4" Source="{local:ImageResources Dulaegil.Images.in-love.png}" />
+                    <Label Grid.Row="3" Grid.Column="4" Text="최고" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                    <Label Grid.Row="4" Grid.Column="4" Text="0.4 ppm" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                </Grid>
+
+            </Grid>
+
+            <!--추천 코스-->
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text=" 추천 코스" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label Grid.Row="1" BackgroundColor="{StaticResource BoundaryLine}" Margin="5, 0, 5, 6" />
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" x:Name="lt_recommendDetails" TextColor="{StaticResource BasicTextColor}" FontSize="Micro" />
+                    <Image Grid.Column="1" Aspect="AspectFill" Source="{local:ImageResources Dulaegil.Images.Sample_img2.png}"/>
+                    <!--<Button BackgroundColor="Transparent" Clicked="RecommendBtn_Clicked" />-->
+                </Grid>
+            </Grid>
+
+            <!--메뉴 바-->
+            <StackLayout Grid.Row="4" Orientation="Horizontal" BackgroundColor="{StaticResource MenubarBackground}">
+                <ImageButton x:Name="dullegilList_btn" Source="{local:ImageResources Dulaegil.Images.DulaegilList.png}" BackgroundColor="Transparent" Clicked="DullegilList_btn_Clicked" />
+                <ImageButton x:Name="ranking_btn" Source="{local:ImageResources Dulaegil.Images.trophy.png}" BackgroundColor="Transparent" Clicked="Ranking_btn_Clicked"/>
+                <ImageButton x:Name="together_btn" Source="{local:ImageResources Dulaegil.Images.together.png}" BackgroundColor="Transparent" Clicked="Together_btn_Clicked"/>
+            </StackLayout>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

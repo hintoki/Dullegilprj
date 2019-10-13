@@ -1,0 +1,11 @@
+D:\DulaegilPrj\Dulaegil\Dulaegil\Dulaegil.UWP\obj\x86\Debug\Dulaegil.UWP.csprojAssemblyReference.cache
+D:\DulaegilPrj\Dulaegil\Dulaegil\Dulaegil.UWP\obj\x86\Debug\App.g.i.cs
+D:\DulaegilPrj\Dulaegil\Dulaegil\Dulaegil.UWP\obj\x86\Debug\App.g.cs
+D:\DulaegilPrj\Dulaegil\Dulaegil\Dulaegil.UWP\obj\x86\Debug\MainPage.g.i.cs
+D:\DulaegilPrj\Dulaegil\Dulaegil\Dulaegil.UWP\obj\x86\Debug\MainPage.g.cs
+D:\DulaegilPrj\Dulaegil\Dulaegil\Dulaegil.UWP\obj\x86\Debug\XamlTypeInfo.g.cs
+D:\DulaegilPrj\Dulaegil\Dulaegil\Dulaegil.UWP\obj\x86\Debug\App.xaml
+D:\DulaegilPrj\Dulaegil\Dulaegil\Dulaegil.UWP\obj\x86\Debug\MainPage.xaml
+D:\DulaegilPrj\Dulaegil\Dulaegil\Dulaegil.UWP\obj\x86\Debug\App.xbf
+D:\DulaegilPrj\Dulaegil\Dulaegil\Dulaegil.UWP\obj\x86\Debug\MainPage.xbf
+D:\DulaegilPrj\Dulaegil\Dulaegil\Dulaegil.UWP\obj\x86\Debug\XamlSaveStateFile.xml

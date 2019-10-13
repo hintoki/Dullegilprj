@@ -1,0 +1,140 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\angry-1.png" />
+    <None Remove="Images\angry.png" />
+    <None Remove="Images\bored-1.png" />
+    <None Remove="Images\bored-2.png" />
+    <None Remove="Images\bored.png" />
+    <None Remove="Images\clouds.jpg" />
+    <None Remove="Images\confused-1.png" />
+    <None Remove="Images\confused.png" />
+    <None Remove="Images\crying-1.png" />
+    <None Remove="Images\crying.png" />
+    <None Remove="Images\DulaegilList.png" />
+    <None Remove="Images\embarrassed.png" />
+    <None Remove="Images\emoticons.png" />
+    <None Remove="Images\happy-1.png" />
+    <None Remove="Images\happy-2.png" />
+    <None Remove="Images\happy-3.png" />
+    <None Remove="Images\happy-4.png" />
+    <None Remove="Images\happy.png" />
+    <None Remove="Images\ill.png" />
+    <None Remove="Images\in-love.png" />
+    <None Remove="Images\kissing.png" />
+    <None Remove="Images\mad.png" />
+    <None Remove="Images\nerd.png" />
+    <None Remove="Images\ninja.png" />
+    <None Remove="Images\point_back.png" />
+    <None Remove="Images\quiet.png" />
+    <None Remove="Images\sad.png" />
+    <None Remove="Images\Sample_Img1.png" />
+    <None Remove="Images\Sample_img2.png" />
+    <None Remove="Images\Sample_map1.png" />
+    <None Remove="Images\secret.png" />
+    <None Remove="Images\smart.png" />
+    <None Remove="Images\Smile.png" />
+    <None Remove="Images\smiling.png" />
+    <None Remove="Images\surprised-1.png" />
+    <None Remove="Images\surprised.png" />
+    <None Remove="Images\suspicious-1.png" />
+    <None Remove="Images\suspicious.png" />
+    <None Remove="Images\together.png" />
+    <None Remove="Images\tongue-out-1.png" />
+    <None Remove="Images\tongue-out.png" />
+    <None Remove="Images\trophy.png" />
+    <None Remove="Images\unhappy.png" />
+    <None Remove="Images\wether_1.png" />
+    <None Remove="Images\wink.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\angry-1.png" />
+    <EmbeddedResource Include="Images\angry.png" />
+    <EmbeddedResource Include="Images\bored-1.png" />
+    <EmbeddedResource Include="Images\bored-2.png" />
+    <EmbeddedResource Include="Images\bored.png" />
+    <EmbeddedResource Include="Images\confused-1.png" />
+    <EmbeddedResource Include="Images\confused.png" />
+    <EmbeddedResource Include="Images\crying-1.png" />
+    <EmbeddedResource Include="Images\crying.png" />
+    <EmbeddedResource Include="Images\DulaegilList.png" />
+    <EmbeddedResource Include="Images\embarrassed.png" />
+    <EmbeddedResource Include="Images\emoticons.png" />
+    <EmbeddedResource Include="Images\happy-1.png" />
+    <EmbeddedResource Include="Images\happy-2.png" />
+    <EmbeddedResource Include="Images\happy-3.png" />
+    <EmbeddedResource Include="Images\happy-4.png" />
+    <EmbeddedResource Include="Images\happy.png" />
+    <EmbeddedResource Include="Images\heart.png" />
+    <EmbeddedResource Include="Images\ill.png" />
+    <EmbeddedResource Include="Images\in-love.png" />
+    <EmbeddedResource Include="Images\kissing.png" />
+    <EmbeddedResource Include="Images\mad.png" />
+    <EmbeddedResource Include="Images\nerd.png" />
+    <EmbeddedResource Include="Images\ninja.png" />
+    <EmbeddedResource Include="Images\point_back.png" />
+    <EmbeddedResource Include="Images\quiet.png" />
+    <EmbeddedResource Include="Images\sad.png" />
+    <EmbeddedResource Include="Images\Sample_Img1.png" />
+    <EmbeddedResource Include="Images\Sample_img2.png" />
+    <EmbeddedResource Include="Images\Sample_map1.png" />
+    <EmbeddedResource Include="Images\secret.png" />
+    <EmbeddedResource Include="Images\smart.png" />
+    <EmbeddedResource Include="Images\Smile.png" />
+    <EmbeddedResource Include="Images\smiling.png" />
+    <EmbeddedResource Include="Images\surprised-1.png" />
+    <EmbeddedResource Include="Images\surprised.png" />
+    <EmbeddedResource Include="Images\suspicious-1.png" />
+    <EmbeddedResource Include="Images\suspicious.png" />
+    <EmbeddedResource Include="Images\together.png" />
+    <EmbeddedResource Include="Images\tongue-out-1.png" />
+    <EmbeddedResource Include="Images\tongue-out.png" />
+    <EmbeddedResource Include="Images\trophy.png" />
+    <EmbeddedResource Include="Images\unhappy.png" />
+    <EmbeddedResource Include="Images\wether_1.png" />
+    <EmbeddedResource Include="Images\wink.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Plugin.FormsStackPanel" Version="1.0.3" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Xamarin.Forms.DataGrid" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Page\MapPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Page\DullegilInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Page\IntroPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="stylesDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="stylesMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Page\UserInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="stylesMenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

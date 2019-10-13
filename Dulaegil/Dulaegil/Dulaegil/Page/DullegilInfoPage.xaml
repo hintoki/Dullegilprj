@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:Dulaegil;assembly=Dulaegil"
+             x:Class="Dulaegil.DullegilInfoPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="{StaticResource WindowBackground}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="1*"/>                             
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource HeaderBackground}">
+                
+            </Grid>
+            <Label Grid.Row="1" Text="둘레길 이름" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" HorizontalTextAlignment="Start"/>            
+            <Label Grid.Row="2" Text="코스 이동거리" TextColor="{StaticResource BasicTextColor}" FontSize="Medium"  HorizontalTextAlignment="Start"/>
+            <Label Grid.Row="3" Text="코스 난이도" TextColor="{StaticResource BasicTextColor}" FontSize="Medium"  HorizontalTextAlignment="Start"/>
+            <Label Grid.Row="4" Text="주소" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" HorizontalTextAlignment="Start" />
+
+            <Label Grid.Row="1" Grid.Column="1" Text=":" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" />
+            <Label Grid.Row="2" Grid.Column="1" Text=":" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" />
+            <Label Grid.Row="3" Grid.Column="1" Text=":" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" />
+            <Label Grid.Row="4" Grid.Column="1" Grid.RowSpan="2" Text=":" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" />
+
+            
+            <Label x:Name="lt_dullegilName" Grid.Row="1" Grid.Column="2" Text="지리산 둘레길 함양센터" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" />            
+            <Label x:Name="lt_distance" Grid.Row="2" Grid.Column="2" Text="12 km" TextColor="{StaticResource BasicTextColor}" FontSize="Medium"  />
+            <Label x:Name="lt_level" Grid.Row="3" Grid.Column="2" Text="상" TextColor="{StaticResource BasicTextColor}" FontSize="Medium"  />
+            <Label x:Name="lt_address" Grid.Row="4" Grid.Column="2" Text="경상남도 함양군 마천면 의탄리 870" TextColor="{StaticResource BasicTextColor}" FontSize="Medium" />
+            
+            <!--지도-->
+            <Image  Grid.Row="5" Grid.ColumnSpan="3" Source="{local:ImageResources Dulaegil.Images.Sample_map1.png}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
